@@ -1,0 +1,34 @@
+<br>
+<div>
+    <h2>Listado de productos</h2>
+    <% if(listaProductos.length > 0) { %>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(productos of listaProductos) { %>
+                <tr>
+                    <td><%= productos.id %> </td>
+                    <td><%= productos.descripcion %></td>
+                    <td><%= productos.precio %></td>
+                    <td><%= productos.foto %></td>
+                    <td>
+                        <button class="btn btn-warning" >Editar</button>
+                        <button class="btn btn-danger" >Eliminar</button>
+                    </td>
+                </tr>
+            <% }; %>
+        </tbody>
+        </table>
+
+        <% } else { %>
+            <p class="alert ">No hay productos</p>
+        <% } %>
+</div>

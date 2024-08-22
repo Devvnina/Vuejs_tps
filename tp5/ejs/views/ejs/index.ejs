@@ -1,0 +1,19 @@
+<%- include('./partial/header.ejs')-%> 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+        <h1><%- titulo-%></h1>
+       <% if (index==0) { %>
+        <%-  include('./partial/formulario.ejs') %> 
+      
+        <% } else if (index==1) { %>
+         
+            <%- include('./partial/historial.ejs') %> 
+          <% }  %>
+               
+        
+        </div>
+
+    </div>
+</div>
+<%- include('./partial/footer.ejs') -%> 
